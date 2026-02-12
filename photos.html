@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./scripts/gallery.js" defer></script>
+    <script src="./scripts/hero-slideshow.js" defer></script>
+    <script src="./scripts/footer-loader.js" defer></script>
+</head>
+<body>
+    <section class="brand" id="hero">
+        <div class="hero-bg hero-bg--a"></div>
+        <div class="hero-bg hero-bg--b"></div>
+
+        <div class="hero-text">
+            <h1>Michael Roca</h1>
+            <h4>Automotive Photographer • New York</h4>
+
+            <div class="hero-actions">
+                <a class="hero-btn hero-btn--ghost" href="./index.html">Home</a>
+                <a class="hero-btn hero-btn--ghost" href="./videos.html">Videos</a>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="portfolio-grid">
+            <button class="tile" data-gallery="performance">
+                <img src="./assets/thumbnail/splash.jpg" alt="performance-and-motion">
+                <div class="tile-label">
+                    <h3>Performance & Motion</h3>
+                    <p>Speed • Dynamics • Action</p>
+                </div>
+            </button>
+            <button class="tile" data-gallery="events">
+                <img src="./assets/thumbnail/checkm8-audi.jpg" alt="events-and-lifestyle">
+                <div class="tile-label">
+                    <h3>Events & Lifestyle</h3>
+                    <p>Events • Lifestyle • Culture</p>
+                </div>
+            </button>
+            <button class="tile" data-gallery="details">
+                <img src="./assets/thumbnail/details.jpg" alt="details-and-portraits">
+                <div class="tile-label">
+                    <h3>Details & Portraits</h3>
+                    <p>Close-ups • Portraits • People</p>
+                </div>
+            </button>
+            <button class="tile" data-gallery="scenic">
+                <img src="./assets/thumbnail/scenic.jpg" alt="scenic-views">
+                <div class="tile-label">
+                    <h3>Scenic Views</h3>
+                    <p>Environment • Landscapes • Atmosphere</p>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <div class="album" id="album" aria-hidden="true">
+        <div class="album__panel">
+            <button type="button" class="album__close" id="albumClose">✕</button>
+            <h3 class="album__title" id="albumTitle">Gallery</h3>
+            <div class="album__grid" id="albumGrid"></div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lbClose" aria-label="Close">✕</button>
+        <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous">‹</button>
+        <figure class="lightbox__frame">
+            <img id="lbImg" alt="">
+            <figcaption id="lbCaption"></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">›</button>
+    </div>
+
+    <div id="footer-container"></div>
+
+</body>
+</html>

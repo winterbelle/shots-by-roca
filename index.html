@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shots By Roca</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./scripts/gallery.js" defer></script>
+    <script src="./scripts/hero-slideshow.js" defer></script>
+    <script src="./scripts/contact.js" defer></script>
+    <script src="./scripts/footer-loader.js" defer></script>
+</head>
+<body>
+    <section class="brand" id="hero">
+        <div class="hero-bg hero-bg--a"></div>
+        <div class="hero-bg hero-bg--b"></div>
+
+        <div class="hero-text">
+            <h1>Michael Roca</h1>
+            <h4>Automotive Photographer • Videographer • New York</h4>
+            <div class="hero-actions">
+                <a class="hero-btn" href="./photos.html">Photos</a>
+                <a class="hero-btn hero-btn--ghost" href="./videos.html">Videos</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bio">
+        <div class="bio__panel">
+            <h2>About Michael</h2>
+             <p> Michael, based in Brooklyn, NY, is an automotive photographer and videographer driven by a lifelong passion 
+                for car culture. As an active member of the scene himself, he brings an insider’s perspective 
+                to his work. His photography explores the relationship between performance vehicles and their 
+                environments, capturing not just the machines but the atmosphere surrounding them. Through both 
+                ground-level photography and aerial drone work, he documents the motion, atmosphere, and presence 
+                of the automotive scene, from street moments to organized events. </p>
+        </div>
+    </section>
+
+    <section class="collab">
+        <div class="collab__panel">
+            <div class="collab__intro">
+            <h2>Collaborations</h2>
+            <p>Selected partners and media work</p>
+        </div>
+
+        <div class="collab__logos">
+            <a href="https://www.instagram.com/miraimoto" target="_blank" class="collab__item">
+                <img src="./assets/logos/miraimoto.jpg" alt="MiraiMoto">
+            </a>
+
+            <a href="https://www.instagram.com/_checkm8_" target="_blank" class="collab__item">
+                <img src="./assets/logos/CheckM8.jpg" alt="CheckM8 Media">
+            </a>
+
+            <a href="https://www.instagram.com/vinnytenracing" target="_blank" class="collab__item">
+                <img src="./assets/logos/VTR-Logo.png" alt="Vinny Ten Racing">
+            </a>
+
+            <a href="https://www.instagram.com/nissanofbayshore" target="_blank" class="collab__item">
+                <img src="./assets/logos/nissan-bayshore.jpg" alt="Nissan of Bayshore">
+            </a>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact__panel">
+            <h2>Contact</h2>
+            <p>For inquiries, collaborations, or shoots, please send a message below and we will get back to you shortly.</p>
+            <form id="contactForm"
+                class="contact__form"
+                action="https://formspree.io/f/mkovorgp"
+                method="POST">
+
+                <label class="contact__field">
+                    <span class="contact__label">
+                        Name <span class="req">*</span>
+                    </span>
+                    <input type="text" name="name" placeholder="John Doe" required>
+                </label>
+
+                <label class="contact__field">
+                    <span class="contact__label">
+                        Email <span class="req">*</span>
+                    </span>
+                    <input type="email" name="email" placeholder="john.doe@example.com" required>
+                </label>
+
+                <label class="contact__field">
+                    <span class="contact__label" id="span">
+                        Phone 
+                        <span class="opt">(optional - include if you prefer to be contacted by phone)</span>
+                        <span class="opt opt-mobile">(optional)</span>
+                    </span>
+                    <input
+                        type="tel"
+                        id="phoneInput"
+                        name="phoneNumber"
+                        placeholder="(555) 555-5555"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                    >
+                </label>
+
+                <label class="contact__field">
+                    <span class="contact__label">
+                        Subject <span class="req">*</span>
+                    </span>
+                    <input type="text" name="subject" placeholder="Subject">
+                </label>
+
+                <label class="contact__field">
+                    <span class="contact__label">
+                        Message <span class="req">*</span>
+                    </span>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </label>
+        
+                <button type="submit">Send</button>
+            </form>
+
+            <!-- Toast / popup -->
+            <div id="formToast" class="toast" aria-live="polite" aria-hidden="true">
+            Message sent
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+</body>
+</html>
