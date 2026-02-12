@@ -122,25 +122,80 @@ body {
 }
 
 .bio__panel {
-  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
   background: #1c1f22;
   border-radius: 22px;
   padding: 50px 40px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
-.bio__panel h2 {
+.bio__panel .bio__photo {
+  width: 220px;
+  height: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+.bio__panel .bio__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bio__panel .bio__text h2 {
   font-family: "eurostile-extended", sans-serif;
   color: #f2f2f2;
   margin-bottom: 8px;
   letter-spacing: 1px;
 }
-.bio__panel p {
+.bio__panel .bio__text p {
+  display: flex;
+  flex-direction: column;
   font-family: "p22-typewriter", sans-serif;
   color: #ffffff;
   opacity: 0.7;
-  margin: 0;
+  margin: 0 40px 0 40px;
+  text-align: center;
+}
+.bio__panel .bio__text .ig-link {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  gap: 10px;
+  text-decoration: none;
+  font-family: "eurostile-extended", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.bio__panel .bio__text .ig-icon {
+  width: 20px;
+  height: 20px;
+}
+.bio__panel .bio__text .ig-link:hover {
+  color: #111;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 18px rgba(255, 255, 255, 0.25);
 }
 
+@media (max-width: 700px) {
+  .bio__panel {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio__panel .bio__text p {
+    text-align: center;
+    margin: 0;
+  }
+  .bio__photo {
+    width: 180px;
+  }
+}
 .collab {
   padding: 60px 20px 70px;
   display: flex;
@@ -182,17 +237,29 @@ body {
 
 .collab__item img {
   height: 70px;
-  opacity: 0.7;
-  filter: grayscale(100%);
   transition: all 0.25s ease;
 }
 
 .collab__item:hover img {
-  opacity: 1;
-  filter: grayscale(0%);
   transform: translateY(-4px);
 }
 
+@media (hover: hover) {
+  .collab__item img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+  .collab__item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .collab__item img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
 .contact {
   padding: 10px 20px 10px;
   display: flex;
