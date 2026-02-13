@@ -254,9 +254,9 @@ body {
     opacity: 1;
   }
 }
-@media only screen and (max-width: 768px) {
+@media (pointer: coarse) and (hover: none) {
   .collab__item img {
-    filter: grayscale(0%);
+    filter: none;
     opacity: 1;
   }
 }
