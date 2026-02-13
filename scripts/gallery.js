@@ -179,8 +179,6 @@ function openAlbum(galleryKey) {
 function closeAlbum() {
   album.classList.remove("is-open");
   album.setAttribute("aria-hidden", "true");
-  // Don't clear overflow here if lightbox opens right after.
-  // We’ll clear overflow only when everything is closed.
   if (!lightbox.classList.contains("is-open")) {
     document.body.style.overflow = "";
   }
@@ -215,6 +213,31 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeAlbum();
   }
 });
+
+//swipe for touch devices
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+  const threshold = 50; // minimum distance required
+
+  if (swipeDistance > threshold) {
+    prev(); // swipe right → previous image
+  } else if (swipeDistance < -threshold) {
+    next(); // swipe left → next image
+  }
+}
+
 
 
 async function init() {

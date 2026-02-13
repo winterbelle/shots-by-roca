@@ -527,6 +527,11 @@ body {
     height: 46px;
   }
 }
+@media (hover: none) and (pointer: coarse) {
+  .lightbox__nav {
+    opacity: 0;
+  }
+}
 .album {
   position: fixed;
   inset: 0;
