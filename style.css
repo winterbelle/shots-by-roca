@@ -183,7 +183,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 18px rgba(255, 255, 255, 0.25);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .bio__panel {
     flex-direction: column;
     align-items: center;
@@ -254,7 +254,7 @@ body {
     opacity: 1;
   }
 }
-@media (hover: none) {
+@media only screen and (max-width: 768px) {
   .collab__item img {
     filter: grayscale(0%);
     opacity: 1;
@@ -527,7 +527,7 @@ body {
   right: 18px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .lightbox__nav {
     width: 46px;
     height: 46px;
@@ -601,7 +601,7 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .album__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -717,7 +717,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .site-footer {
     padding: 32px 20px 40px;
   }

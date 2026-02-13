@@ -222,7 +222,7 @@ body {
 
 }
 
-@media (max-width: 700px){
+@media (max-width: 768px){
 
   .bio__panel{
     flex-direction: column;
@@ -305,13 +305,12 @@ body {
 
 }
 
-@media (hover: none){
-
-  .collab__item img{
+@media only screen and (max-width: 768px) {
+  .collab__item img {
     filter: grayscale(0%);
     opacity: 1;
   }
-
+  
 }
 
 
@@ -597,7 +596,7 @@ body {
 .lightbox__prev { left: 18px; }
 .lightbox__next { right: 18px; }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .lightbox__nav { width: 46px; height: 46px; }
 }
 
@@ -669,7 +668,7 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .album__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -794,7 +793,7 @@ body {
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 768px){
   .site-footer{
     padding: 32px 20px 40px;
   }
