@@ -2,7 +2,7 @@ const videos = [
   {
     url: "https://www.instagram.com/reel/DMDYdgPOSlj/",
     thumb: "./assets/thumbnail/qualifying-round3.png",
-    caption: "Panamerican Nationals Qualifying Round 3 - 2025"
+    caption: "PanAmerican Nationals Qualifying Round 3 - 2025"
   },
   {
     url: "https://www.instagram.com/reel/DL_RsQKMc2l/",
