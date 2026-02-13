@@ -305,9 +305,9 @@ body {
 
 }
 
-@media (pointer: coarse) and (hover: none) {
+@media screen and (max-width: 1068px) and (pointer:coarse) and (hover: none) {
   .collab__item img {
-    filter: none;
+    filter: grayscale(0%);
     opacity: 1;
   }
 }
